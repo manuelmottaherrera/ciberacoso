@@ -1,0 +1,72 @@
+/* Quiénes somos — página de opciones (quienes-somos.html) y sus páginas
+   Misión, Visión, Objetivos, Cronograma (hola.1 a hola.5) y Pregunta Problema (hola.6).
+   Se carga después de base.css. */
+
+/* ===== Página de opciones: título arriba y botones centrados en columna ===== */
+
+.seccion-opciones {
+  justify-content: flex-start;
+}
+
+.titulo-seccion {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(1.75rem, 5vw, 3.25rem);
+  color: var(--blanco);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+.opciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin: auto 0;
+}
+
+.boton-opcion {
+  display: block;
+  width: 240px;
+  padding: 14px 20px;
+  background-color: var(--blanco);
+  color: var(--negro);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.boton-opcion:hover {
+  background-color: var(--rojo-submenu);
+  color: var(--blanco);
+}
+
+/* ===== Pregunta Problema: misma tipografía y tamaño que el título de la página de opciones ===== */
+
+.pregunta {
+  max-width: 1100px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(1.75rem, 5vw, 3.25rem);
+  line-height: 1.35;
+  color: var(--blanco);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* ===== Tarjetas de Misión, Visión, Objetivos y Cronograma ===== */
+
+.tarjeta {
+  width: min(900px, calc(100vw - var(--ancho-barra) - 3rem));
+  height: auto;
+  display: block;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 760px) {
+  .tarjeta {
+    width: 92vw;
+  }
+}

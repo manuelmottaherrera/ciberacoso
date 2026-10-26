@@ -1,0 +1,103 @@
+/* Evidencias — galería de fotos del trabajo de campo (evidencias.html).
+   Se carga después de base.css: .contenido-largo corrige el centrado de .contenido. */
+
+.contenido-largo {
+  justify-content: flex-start;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  width: min(900px, calc(100vw - var(--ancho-barra) - 3rem));
+}
+
+.evidencia {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  background-color: var(--fondo-alt);
+  padding: 0.75rem;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.5);
+}
+
+.evidencia a {
+  display: block;
+  overflow: hidden;
+}
+
+.evidencia img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.evidencia a:hover img {
+  transform: scale(1.03);
+}
+
+.evidencia figcaption {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--blanco);
+  opacity: 0.9;
+}
+
+/* Ampliar una evidencia sin salir de la página (solo CSS, con :target) */
+
+.lightbox {
+  display: none;
+}
+
+.lightbox:target {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.lightbox-fondo {
+  position: absolute;
+  inset: 0;
+}
+
+.lightbox img {
+  position: relative;
+  max-width: min(700px, 92vw);
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+.lightbox-cerrar {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--rojo-submenu);
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.lightbox-cerrar:hover {
+  background-color: var(--rojo-submenu-hover);
+}
+
+@media (max-width: 760px) {
+  .galeria {
+    width: 92vw;
+  }
+}

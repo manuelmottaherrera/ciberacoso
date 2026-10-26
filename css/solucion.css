@@ -1,0 +1,24 @@
+/* Solución Técnica — presentación de Genially embebida (solucion.html).
+   Se carga después de base.css. */
+
+.marco-genially {
+  position: relative;
+  width: min(1100px, calc(100vw - var(--ancho-barra) - 3rem));
+  aspect-ratio: 16 / 9;
+  background-color: var(--negro);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.5);
+}
+
+.marco-genially iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 760px) {
+  .marco-genially {
+    width: 92vw;
+  }
+}

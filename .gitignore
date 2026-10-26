@@ -1,0 +1,4 @@
+# Archivos de diseño fuente y configuración local: la página no los usa
+*.ai
+*.ait
+.claude/

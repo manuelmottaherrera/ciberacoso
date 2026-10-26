@@ -1,0 +1,22 @@
+/* Contacto — visor de hojas de vida en PDF (hv.naara.html, hv.camila.html).
+   Se carga después de base.css. */
+
+.visor-pdf {
+  width: min(900px, calc(100vw - var(--ancho-barra) - 3rem));
+  height: min(78vh, 900px);
+  min-height: 420px;
+  border: 0;
+  background-color: var(--blanco);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.5);
+}
+
+.aviso-pdf {
+  padding: 2rem 1.5rem;
+  color: var(--negro);
+}
+
+@media (max-width: 760px) {
+  .visor-pdf {
+    width: 92vw;
+  }
+}

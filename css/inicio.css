@@ -1,0 +1,49 @@
+/* Inicio — portada (ciberacoso.html). Se carga después de base.css. */
+
+.hero {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  min-height: 85vh;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background-color: var(--fondo-alt);
+}
+
+.hero-cuerpo {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.hero-texto {
+  max-width: 32rem;
+}
+
+.nombre-app {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2.25rem, 6vw, 4.5rem);
+  color: var(--blanco);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.slogan {
+  color: var(--blanco);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
+
+.hero-imagen {
+  width: min(320px, 60vw);
+  height: auto;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.55));
+}
